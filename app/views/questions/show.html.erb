@@ -1,0 +1,15 @@
+<h1>Question#show</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question:</b>
+  <%=  @question.question %>
+  <%=  @question.user %>
+  <%=  @question.solved %>
+
+</p>
+
+<%= link_to 'New Question', new_question_path %> |
+<%= link_to 'Edit', edit_question_path %> |
+<%= link_to 'Back', questions_path %>
+
