@@ -1,13 +1,15 @@
-<h1>Question#show</h1>
+<h1 class="title">Question show</h1><br />
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Question:</b>
+
+
+
+<p class="content">
   <%=  @question.question %>
   <%=  @question.user %>
   <%=  @question.solved %>
 
-</p>
+</p><br />
 
 <%= link_to 'New Question', new_question_path %> |
 <%= link_to 'Back', questions_path %>
