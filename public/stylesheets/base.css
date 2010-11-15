@@ -19,6 +19,7 @@ body {
 .columns { width: 290px; text-align: center; }
 
 .span-1 { width:30px; }
+.span-5 {width:190px;}
 
 a { color: #666666; }
 a:hover { color: #7AB1F8; }
@@ -39,23 +40,25 @@ h1.logo {
 
 .username { color: #7AB1F8; font-weight: bold; }
 
-#welcome {
-  text-align: justify;
+#option {
+  text-align: left;
 }
 
-  #welcome h2 {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: -1px;
-    line-height: 1.2em;
-    color: #BFD8F8;
-  }
+#title h2
+{
+font-size: 28px;
+font-weight: bold;
+letter-spacing: -1px;
+line-height: 1.2em;
+color: #BFD8F8;
+}
 
-    #welcome h2 em {
-      padding: 1px 4px;
-      background-color: #9799D1;
-      color: #ffffff;
-    }
+#title h2 em
+{
+padding: 1px 4px;
+background-color: #9799D1;
+color: #ffffff;
+}
 
 
 h3.updater {

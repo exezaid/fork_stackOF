@@ -1,11 +1,11 @@
-<h1>Question#index</h1>
-<table class="">
+<h1 id="title" >Question index</h1><br />
+<table class="" border="0" cellspacing="0" cellpadding="0">
 <% @questions.each do |question| %>
   <tr>
-    <td><%= question.question %> </td>
-    <td> <%= link_to 'Show', question %></td>
+    <td class="columns"><%= question.question %> </td>
+    <td > <%= link_to 'Show', question %></td>
   </tr>
 <% end %>
-</table>
+</table> <br />
 <%= link_to 'New Question', new_question_path %>
 
