@@ -1,7 +1,7 @@
-<h1 id="title" >Question index</h1><br />
-<table class="" border="0" cellspacing="0" cellpadding="0">
+<h1 class="title" >Question index</h1><br />
+<table  border="0" cellspacing="0" cellpadding="0">
 <% @questions.each do |question| %>
-  <tr>
+  <tr >
     <td class="columns"><%= question.question %> </td>
     <td > <%= link_to 'Show', question %></td>
   </tr>
