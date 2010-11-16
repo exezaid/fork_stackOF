@@ -10,11 +10,6 @@
   </li>
 </ul><br />
 
-<%= link_to 'Answer this question', new_question_answer_path(@question)  %> |
-
-<%= link_to 'New Question', new_question_path %> |
-<%= link_to 'Back', questions_path %>
-
 <ul class="list">
       <li class="item row">
         <div class="thirteen columns">Creado el</div>
@@ -35,4 +30,7 @@
   <% end %>
 </ul>
 <div id="new-log-entry-box"><%= render 'answers/form' %></div><br />
+
+
+<%= link_to 'Back', questions_path %>
 
