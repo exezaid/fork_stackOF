@@ -1,0 +1,24 @@
+<%= form_for [@question, @answer] do |form| %>
+  <% if @answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@answer.errors.count, "error") %> El formulario tiene un error:</h2>
+
+      <ul>
+      <% @answer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :body %><br />
+    <%= form.text_area :body %> <br />
+    <%= form.label :user %><br />
+    <%= form.text_field :user %><br />
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
