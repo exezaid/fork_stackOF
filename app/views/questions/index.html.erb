@@ -1,10 +1,11 @@
 <h1 class="title" >Question index</h1><br />
-<table  border="0" cellspacing="0" cellpadding="0">
+<ul>
+
 <% @questions.each do |question| %>
-  <tr >
-    <td > <%= link_to question.question, question %></td>
-  </tr>
+  <li>
+    <div class="centrado"> <%= link_to question.question, question %></div>
+  </li>
 <% end %>
-</table> <br />
+</ul> <br />
 <%= link_to 'New Question', new_question_path %>
 
