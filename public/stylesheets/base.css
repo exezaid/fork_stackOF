@@ -15,7 +15,7 @@ body {
 .highlight { background-color: #f3e03f; }
 .blank { background-color: #ffffff; }
 
-.item { margin-left: 0px; text-align: center; color: #f3e03f;  }
+.item { margin-left: 0px; text-align: center; color: #1f231e;  }
 .columns { width: 290px; text-align: center; }
 .centrado { text-align: center; }
 
@@ -77,7 +77,7 @@ h3.updater {
 }
 
 #new-log-entry-box {
-  background-color: #BFD8F8;
+  background-color: #a8abb0;
   padding: 10px;
   margin-bottom: 20px;
 }
