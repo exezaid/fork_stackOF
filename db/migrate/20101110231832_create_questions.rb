@@ -4,6 +4,8 @@ class CreateQuestions < ActiveRecord::Migration
       t.text :question
       t.string :user
       t.boolean :solved
+      t.integer :positive_vote
+      t.integer :negative_vote
 
       t.timestamps
     end
@@ -13,3 +15,4 @@ class CreateQuestions < ActiveRecord::Migration
     drop_table :questions
   end
 end
+

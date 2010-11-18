@@ -18,14 +18,19 @@
         <span class="divider"></span>
       </li><br/>
   <% @question.answers.each do |answer| %>
+      <% next if answer.new_record? %>
       <li class="item row">
-        <div class="two columns"><%= answer.created_at("%B %d, %Y") %></div>
+        <div class="two columns"><%= time_ago_in_words(answer.created_at) %></div>
         <div class="thirteen columns">
           <%= answer.body %>
         </div>
         <div class="two columns">
         <%= answer.user %>
         </div>
+       <div class="two columns">
+        <%= link_to '+', [:positive_vote, @question, answer], :method => :put %> |
+        <%= link_to '-', [:negative_vote, @question, answer], :method => :put %>
+      </div>
       </li><br/>
   <% end %>
 </ul>

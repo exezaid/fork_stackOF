@@ -3,7 +3,12 @@
 
 <% @questions.each do |question| %>
   <li>
-    <div class="centrado"> <%= link_to question.question, question %></div>
+    <div class="nine columns"> <%= link_to question.question, question %></div>
+    <div class="two columns">
+          <%= link_to '+', [:positive_vote, question], :method => :put %> |
+          <%= link_to '-', [:negative_vote, question], :method => :put %>
+    </div>
+    <div class="two columns"><%=  question.user %></div>
   </li>
 <% end %>
 </ul> <br />

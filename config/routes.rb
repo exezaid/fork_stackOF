@@ -1,7 +1,16 @@
 ForkStackoverflow::Application.routes.draw do
 
   resources :questions do
-    resources :answers
+    member do
+      put :positive_vote
+      put :negative_vote
+    end
+    resources :answers do
+      member do
+        put :positive_vote
+        put :negative_vote
+      end
+    end
   end
 
 

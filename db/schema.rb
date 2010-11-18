@@ -10,12 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101115220544) do
+ActiveRecord::Schema.define(:version => 20101118001321) do
 
   create_table "answers", :force => true do |t|
     t.string   "body"
     t.string   "user"
     t.integer  "question_id"
+    t.integer  "positive_vote", :default => 0
+    t.integer  "negative_vote", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -24,6 +26,8 @@ ActiveRecord::Schema.define(:version => 20101115220544) do
     t.text     "question"
     t.string   "user"
     t.boolean  "solved"
+    t.integer  "positive_vote", :default => 0
+    t.integer  "negative_vote", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
