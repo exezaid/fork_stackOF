@@ -3,9 +3,13 @@
 
 <ul class="list">
   <li class="content row" >
-    <div class="one columns"><%=  @question.created_at("%B %d, %Y") %></div>
+    <div class="one columns"><%= time_ago_in_words(@question.created_at) %></div>
     <div class="thirteen columns"><%=  @question.question %></div>
     <div class="two columns"><%=  @question.user %></div>
+    <div class="two columns">
+      <%= link_to '+', [:positive_vote, @question], :method => :put %> |
+      <%= link_to '-', [:negative_vote, @question], :method => :put %>
+    </div>
     <div><%=  @question.solved %></div>
   </li>
 </ul><br />
