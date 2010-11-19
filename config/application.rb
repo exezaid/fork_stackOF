@@ -38,5 +38,8 @@ module ForkStackoverflow
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    config.secret_token = 'f37ad9d889f0e3058bcc787cb4f73e3e20a1287875f7a3878233ca78454109df2b7b17222fbb604109854a1dbb83d23a8a8c4a3e472c0e0afef926143b327c2d'
   end
 end
+

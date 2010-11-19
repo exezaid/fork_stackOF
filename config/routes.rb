@@ -1,5 +1,7 @@
 ForkStackoverflow::Application.routes.draw do
 
+  devise_for :users
+
   resources :questions do
     member do
       put :positive_vote
