@@ -6,11 +6,13 @@
     <div class="one columns"><%= time_ago_in_words(@question.created_at) %></div>
     <div class="thirteen columns"><%=  @question.question %></div>
     <div class="two columns"><%=  @question.user %></div>
+    <div><%=  @question.solved %></div>
+    <% if user_signed_in? %>
     <div class="two columns">
       <%= link_to '+', [:positive_vote, @question], :method => :put %> |
       <%= link_to '-', [:negative_vote, @question], :method => :put %>
     </div>
-    <div><%=  @question.solved %></div>
+    <% end -%>
   </li>
 </ul><br />
 
@@ -31,10 +33,12 @@
         <div class="two columns">
         <%= answer.user %>
         </div>
+        <% if user_signed_in? -%>
        <div class="two columns">
         <%= link_to '+', [:positive_vote, @question, answer], :method => :put %> |
         <%= link_to '-', [:negative_vote, @question, answer], :method => :put %>
       </div>
+      <% end -%>
       </li><br/>
   <% end %>
 </ul>
