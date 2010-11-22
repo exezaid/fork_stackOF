@@ -7,7 +7,7 @@ div#container, div.container { position: relative; width: 940px; margin: 0 auto;
 /*	--------------------------------------------------
 Grid
 -------------------------------------------------- */
-.column-row, .row { margin: 0 0 16px -10px; }
+.column-row, .row { margin:0 0 5px 0; }
 .column, .columns { float: left; display: inline; margin: 0 0 0 20px; }
 
 .one { width: 40px; }

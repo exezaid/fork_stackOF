@@ -3,8 +3,11 @@
 
 <% @questions.each do |question| %>
   <li>
+    <div class="two columns"><%= time_ago_in_words(question.created_at) %></div>
     <div class="nine columns"> <%= link_to question.question, question %></div>
-    <div class="two columns"><%=  question.user %></div>
+    <div class="two columns"><%=  question.user %></div><br /><br />
+
+
   </li>
 <% end %>
 </ul> <br />

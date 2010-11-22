@@ -1,23 +1,22 @@
 <h1 class="title">Question show</h1><br />
-<p id="notice"><%= notice %></p>
 
 <ul class="list">
   <li class="content row" >
     <div class="one columns"><%= time_ago_in_words(@question.created_at) %></div>
     <div class="thirteen columns"><%=  @question.question %></div>
-    <div class="two columns"><%=  @question.user %></div>
-    <div><%=  @question.solved %></div>
+    <div class="two columns"><%=  @question.user %></div><br/><br/>
+
     <% if user_signed_in? %>
     <div class="two columns">
-      <%= link_to '+', [:positive_vote, @question], :method => :put %> |
-      <%= link_to '-', [:negative_vote, @question], :method => :put %>
+      <%= link_to image_tag("vote-arrow-up-on.png") , [:positive_vote, @question], :method => :put %>
+      <%= link_to image_tag("vote-arrow-down-on.png") , [:negative_vote, @question], :method => :put %>
     </div>
     <% end -%>
   </li>
 </ul><br />
 
 <ul class="list">
-      <li class="item row">
+      <li class="item highlight row">
         <div class="thirteen columns">Creado el</div>
         <div class="thirteen columns">Respuesta</div>
         <div class="two columns">Usuario</div>
@@ -32,11 +31,13 @@
         </div>
         <div class="two columns">
         <%= answer.user %>
-        </div>
+        </div><br/><br/>
+
+
         <% if user_signed_in? -%>
        <div class="two columns">
-        <%= link_to '+', [:positive_vote, @question, answer], :method => :put %> |
-        <%= link_to '-', [:negative_vote, @question, answer], :method => :put %>
+        <%= link_to image_tag("vote-arrow-up-on.png") , [:positive_vote, @question, answer], :method => :put %>
+        <%= link_to image_tag("vote-arrow-down-on.png") , [:negative_vote, @question, answer], :method =>  :put %>
       </div>
       <% end -%>
       </li><br/>

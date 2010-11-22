@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ForkStackoverflow</title>
+  <title >ForkStackoverflow</title>
   <%= stylesheet_link_tag    "reset", "grid", "base" %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
@@ -16,12 +16,12 @@
           Te has logeado con la cuenta <%= current_user.email %>. no eres tu?
           <%= link_to "deslogear", destroy_user_session_path %>
         <% else %>
-          <%= link_to "Registrarse", new_user_registration_path %> or <%= link_to "logearse", new_user_session_path %>
+          <%= link_to "Registrarse", new_user_registration_path %> o <%= link_to "logearse", new_user_session_path %>
         <% end %>
       </div><br/>
         <div class="header row">
           <div class="four columns">
-            <h1 class="logo">Fork Stack Overflow</h1>
+            <h1 id="title"  >Fork Stack Overflow</h1>
           </div>
         </div>
 

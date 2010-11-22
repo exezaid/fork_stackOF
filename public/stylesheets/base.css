@@ -12,10 +12,11 @@ body {
 .title { text-align: center; }
 .footer  { color: #666666; margin-top: 20px; }
 
-.highlight { background-color: #f3e03f; }
+.item { margin-left: 0px; text-align: center; color: #1f231e;  }
+.highlight { background-color: #B2C3FF; color: #ffffff; }
 .blank { background-color: #ffffff; }
 
-.item { margin-left: 0px; text-align: center; color: #1f231e;  }
+
 .columns { width: 290px; text-align: center; }
 .centrado { text-align: center; }
 
@@ -51,7 +52,7 @@ text-align: center;
   text-align: left;
 }
 
-#title h2
+#title h1
 {
 font-size: 28px;
 font-weight: bold;
@@ -60,7 +61,7 @@ line-height: 1.2em;
 color: #BFD8F8;
 }
 
-#title h2 em
+#title h1 em
 {
 padding: 1px 4px;
 background-color: #9799D1;
