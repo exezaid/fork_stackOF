@@ -14,7 +14,7 @@
       <div id="user_nav">
         <% if user_signed_in? %>
           Te has logeado con la cuenta <%= current_user.email %>. no eres tu?
-          <%= link_to "deslogear", destroy_user_session_path %>
+          <%= link_to "Salir", destroy_user_session_path %>
         <% else %>
           <%= link_to "Registrarse", new_user_registration_path %> o <%= link_to "logearse", new_user_session_path %>
         <% end %>
