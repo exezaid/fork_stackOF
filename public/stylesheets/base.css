@@ -15,7 +15,8 @@ body {
 .item { margin-left: 0px; text-align: center; color: #1f231e;  }
 .highlight { background-color: #B2C3FF; color: #ffffff; }
 .blank { background-color: #ffffff; }
-
+.red {  color: #EF3019; }
+.green { color: #009502; }
 
 .columns { width: 290px; text-align: center; }
 .centrado { text-align: center; }
