@@ -4,9 +4,9 @@
   <li class="content row" >
     <div class="one columns"><%= time_ago_in_words(@question.created_at) %></div>
     <div class="thirteen columns"><%=  @question.question %></div>
-    <div class="two columns"><%=  @question.user %></div><br/><br/>
+    <div class="two columns"><%=  user_from_email(@question.user.email) %></div><br/><br/>
     <div class="two columns">
-      <label class="green"><%= @question.positive_vote %></label>  | 
+      <label class="green"><%= @question.positive_vote %></label>  |
       <label class="red"><%= @question.negative_vote %></label>
     </div><br />
     <br />
@@ -36,14 +36,14 @@
           <%= answer.body %>
         </div>
         <div class="two columns">
-        <%= answer.user %>
+        <%= user_from_email(answer.user.email) %>
         </div><br/><br/>
         <div class="two columns">
-          <label class="green"><%= answer.positive_vote %></label>  | 
+          <label class="green"><%= answer.positive_vote %></label>  |
           <label class="red"><%= answer.negative_vote %></label>
         </div><br />
         <br />
-        
+
 
         <% if user_signed_in? -%>
        <div class="two columns">
@@ -51,7 +51,7 @@
         <%= link_to image_tag("vote-arrow-down-on.png") , [:negative_vote, @question, answer], :method =>  :put %>
       </div>
       <% end -%>
-      
+
       </li><br/>
   <% end %>
 </ul>
